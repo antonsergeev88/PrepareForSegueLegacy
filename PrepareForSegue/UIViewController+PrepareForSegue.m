@@ -29,7 +29,10 @@
   NSString *selectorString = [NSString stringWithFormat:@"prepareFor%@:sender:", identifier];
   SEL selector = NSSelectorFromString(selectorString);
   if ([self respondsToSelector:selector]) {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [self performSelector:selector withObject:segue withObject:sender];
+    #pragma clang diagnostic pop
   } else {
     NSLog(@"Warning: performing segue with identifier \"%@\" without custom preparing.", identifier);
   }
