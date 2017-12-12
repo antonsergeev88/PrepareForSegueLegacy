@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		60661D191FDF9F42009E7980 /* PrepareForSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 60661D171FDF9F42009E7980 /* PrepareForSegue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60661D211FDF9F57009E7980 /* UIViewController+PrepareForSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 60661D1F1FDF9F57009E7980 /* UIViewController+PrepareForSegue.h */; };
+		60661D221FDF9F57009E7980 /* UIViewController+PrepareForSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 60661D201FDF9F57009E7980 /* UIViewController+PrepareForSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		60661D141FDF9F42009E7980 /* PrepareForSegue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrepareForSegue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60661D171FDF9F42009E7980 /* PrepareForSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrepareForSegue.h; sourceTree = "<group>"; };
 		60661D181FDF9F42009E7980 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60661D1F1FDF9F57009E7980 /* UIViewController+PrepareForSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PrepareForSegue.h"; sourceTree = "<group>"; };
+		60661D201FDF9F57009E7980 /* UIViewController+PrepareForSegue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PrepareForSegue.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				60661D171FDF9F42009E7980 /* PrepareForSegue.h */,
+				60661D1F1FDF9F57009E7980 /* UIViewController+PrepareForSegue.h */,
+				60661D201FDF9F57009E7980 /* UIViewController+PrepareForSegue.m */,
 				60661D181FDF9F42009E7980 /* Info.plist */,
 			);
 			path = PrepareForSegue;
@@ -60,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60661D191FDF9F42009E7980 /* PrepareForSegue.h in Headers */,
+				60661D211FDF9F57009E7980 /* UIViewController+PrepareForSegue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60661D221FDF9F57009E7980 /* UIViewController+PrepareForSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
