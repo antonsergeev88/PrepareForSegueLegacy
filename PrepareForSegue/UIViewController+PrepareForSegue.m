@@ -24,17 +24,21 @@
 }
 
 - (void)as_prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  [self as_prepareForSegue:segue sender:sender];
   NSString *identifier = segue.identifier;
   NSString *selectorString = [NSString stringWithFormat:@"prepareFor%@:sender:", identifier];
   SEL selector = NSSelectorFromString(selectorString);
-  if ([self respondsToSelector:selector]) {
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+  if (identifier.length > 0 && [self respondsToSelector:selector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [self performSelector:selector withObject:segue withObject:sender];
-    #pragma clang diagnostic pop
+#pragma clang diagnostic pop
   } else {
-    NSLog(@"Warning: performing segue with identifier \"%@\" without custom preparing.", identifier);
+#ifdef DEBUG
+    if (identifier.length > 0) {
+      NSLog(@"Warning: performing segue with identifier \"%@\" without custom preparing.", identifier);
+    }
+#endif
+    [self as_prepareForSegue:segue sender:sender];
   }
 }
 
